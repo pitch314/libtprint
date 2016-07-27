@@ -1,40 +1,39 @@
 # libtprint
 
-[![Build Status](https://travis-ci.org/wizzard/libtprint.png?branch=master)](https://travis-ci.org/wizzard/libtprint)
+[![Build Status](https://travis-ci.org/pitch314/libtprint.png?branch=master)](https://travis-ci.org/pitch314/libtprint)
 
-TPrint is a simple C library to print ASCII tabular data.
+TPrint is a simple PHP library to print ASCII tabular data.
+It is based on wizzard TPrint C library (https://github.com/wizzard/libtprint/)
 
 Installation
 ============
 ```
-sh autogen.sh
-./configure
-make
-make install
+none
 ```
 
 Usage
 =====
 
-(check test_tprint.c for example)
+(check test_tprint.php for example)
 
 ```
-#include <tprint.h>
+<?php
+require_once("TPrint.php");
 ..
-TPrint *tp;
-tp = tprint_create (..);
-tprint_column_add (tp, ..);
+$tp = new TPrint(..);
+$tp->tprint_column_add(..);
 ..
-tprint_data_add_double (tp, ..);
+$tp->tprint_add_row(..);
 ..
-tprint_print (tp);
-tprint_free (tp);
+$tp->tprint_data_add($num_col, $data);
+..
+$tp->tprint_print();
+echo $tp->sout;
+
+..
+?>
 ```
 
-compile:
-```
-gcc main.c -ltprint `pkg-config --libs --cflags glib-2.0`
-```
 
 output examples:
 
