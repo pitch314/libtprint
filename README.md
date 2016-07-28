@@ -1,6 +1,6 @@
 # libtprint
 
-[![Build Status](https://travis-ci.org/pitch314/libtprint.png?branch=master)](https://travis-ci.org/pitch314/libtprint)
+[![Build Status](https://travis-ci.org/pitch314/libtprint.svg?branch=master)](https://travis-ci.org/pitch314/libtprint)
 
 TPrint is a simple PHP library to print ASCII tabular data.
 It is based on wizzard TPrint C library (https://github.com/wizzard/libtprint/)
